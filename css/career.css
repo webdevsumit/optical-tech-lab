@@ -1,0 +1,33 @@
+.career{
+    margin: 10%;
+}
+
+.career-head{
+    color: red;
+}
+
+.career-head-2{
+    color: rgb(97, 27, 27);
+}
+
+.career-card{
+    margin:5% 15%;
+}
+
+.career-card-head{
+    color: rgb(243, 127, 127)!important;
+}
+
+.career-card-head>i{
+    margin-right: 10px;
+}
+
+.career-card-head:hover{
+    text-decoration: underline;
+}
+
+@media only screen and (max-width:1000px){
+    .career{
+        margin-top: 20%
+    }
+}

@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Add a gray background color with some padding */
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-weight: 800;
+        }
+
+        .row {
+            margin-right: 0px !important;
+            margin-left: 140px !important;
+        }
+
+        .post-heading {
+            padding: 100px 0;
+            color: #FFF;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5), -1px -1px 3px rgba(0, 0, 0, 0.5), -1px 1px 3px rgba(0, 0, 0, 0.5), 1px -1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .post-heading h1 {
+            font-size: 50px;
+            font-weight: 800;
+        }
+
+        body {
+            font-family: Arial;
+            padding: 20px;
+            background: #f1f1f1;
+        }
+
+        /* Header/Blog Title */
+        .header {
+            padding: 30px;
+            font-size: 40px;
+            text-align: center;
+            background: white;
+        }
+
+        /* Create two unequal columns that floats next to each other */
+        /* Left column */
+        .leftcolumn {
+            float: left;
+            width: 100%;
+        }
+
+        /* Right column */
+        .rightcolumn {
+            float: left;
+            width: 25%;
+            padding-left: 20px;
+        }
+
+        /* Fake image */
+        .fakeimg {
+            margin-top: 100px;
+            background-color: #2B0D05 !important;
+            width: 100%;
+            padding: 20px;
+            background: url(images/services/alexa_banner_new.jpg) no-repeat left center;
+            background-size: 100% auto;
+        }
+
+        /* Add a card effect for articles */
+        .card {
+            background-color: transparent;
+            padding: 20px;
+            margin-top: 20px;
+            font-size: 20px;
+            color: #fff;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 20px;
+            text-align: center;
+            background: #2B0D05 !important;
+            margin-top: 20px;
+        }
+
+        body {
+            background: #2B0D05 !important;
+        }
+
+        .container-fluid {
+            padding-left: 0px !important;
+            padding-right: 0px !important;
+        }
+
+        #error {
+            display: none;
+            color: red !important;
+        }
+
+        #error>p>a {
+            color: red !important;
+        }
+
+        #contact {
+            background-color: #2B0D05 !important;
+            color: #707B89 !important;
+        }
+
+        /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 800px) {
+            .fakeimg {
+                margin-top: 0px;
+            }
+
+            .leftcolumn,
+            .rightcolumn {
+                width: 100%;
+                padding: 0;
+            }
+
+            .row {
+                margin-right: 0px !important;
+                margin-left: 0px !important;
+            }
+        }
+    </style>
+    <!--- Basic Page Needs
+   ================================================== -->
+    <meta charset="utf-8">
+    <meta name="trustpilot-one-time-domain-verification-id" content="GMrhKwwZ5FGasdXfN1VdZph21bxnNLNR2TjuF0Mm" />
+    <title>Alexa Skill Android App for CES2019 | Optimum Technical Labs LLP</title>
+    <meta name="description" content="Alexa Skill and/or Android app for exhibiting your products/service at CES2019">
+
+
+    <link rel="canonical" href="https://theoptimumlabs.com/android-app-and-alexa-skill-for-ces-2019.html" />
+    <meta name="author" content="https://theoptimumlabs.com" />
+    <meta name="keywords"
+        content="ces2019, CES, CES 2019, CES Las Vegas, alexa skill development,amazon alexa skill development,alexa skill developers,top 10 Alexa skill developers, custom alexa skill development, hire alexa skill developer, alexa skill expert, voice user interface desginer, google action developer, google home developer" />
+    <meta name="page-topic" content="CES 2019 | Alexa Skill Development | Android app development" />
+
+    <!-- new meta tags -->
+    <meta name="rating" content="general" />
+
+    <meta name="distribution" content="global" />
+    <meta http-equiv="content-language" content="en-us" />
+    <!-- new meta tags end here-->
+
+    <!-- og meta tags -->
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Alexa Skill Android App for CES2019 | Optimum Technical Labs LLP" />
+    <meta property="og:description"
+        content="Alexa Skill and/or Android app for exhibiting your products/service at CES2019" />
+    <meta property="og:url" content="https://theoptimumlabs.com/android-app-and-alexa-skill-for-ces-2019.html" />
+    <meta property="og:site_name" content="Optimum Technical Labs LLP" />
+    <!--og meta tags end here-->
+
+    <!-- twitter meta tags -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:description"
+        content="Alexa Skill and/or Android app for exhibiting your products/service at CES2019" />
+    <meta name="twitter:title" content="Alexa Skill Android App for CES2019 | Optimum Technical Labs LLP" />
+    <meta name="twitter:site" content="@OptimumTechLabs" />
+    <meta name="twitter:creator" content="@SnehilChouhan" />
+    <!--twitter meta tags end here-->
+
+    <!-- Schema -->
+    <script type="application/ld+json"> { "@context": "http://schema.org",
+            "@type": "Organization",
+            "name": "Optimum Technical Labs LLP",
+            "url": "https://theoptimumlabs.com",
+            "logo": "https://theoptimumlabs.com/favicon.ico",
+            "sameAs": [ "https://www.facebook.com/OptimumTechnicalLabsLLP/", "https://twitter.com/OptimumTechLabs",
+                       "https://www.linkedin.com/company/the-optimum-technical-labs/",
+                       
+                       "https://plus.google.com/u/1/+OptimumTechnicalLabsAppDevelopmentCompany",
+                       
+                       "https://www.instagram.com/optimumtechlabs/" ]
+        }
+        </script>
+    <script type="application/ld+json">
+            { "@context": "http://schema.org/",
+                "@type": "Service", "aggregateRating":
+                { "@type": "AggregateRating", "ratingValue": "4.9/5.0",
+                    "reviewCount": "50" }
+                
+            } </script>
+
+    <!-- Schema -->
+
+    <!-- Mobile Specific Metas
+  ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="trustpilot-one-time-domain-verification-id" content="GMrhKwwZ5FGasdXfN1VdZph21bxnNLNR2TjuF0Mm" />
+    <!-- CSS
+   ================================================== -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+    <!-- Favicons
+	================================================== -->
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+</head>
+<!-- Header
+   ================================================== -->
+<header class="mobile">
+    <a class="nav-contact-btn" href="#contact"><button>Contact</button></a>
+    <div class="row">
+
+        <div class="col full">
+
+            <div class="logo">
+                <a href="index.html"><img alt="" src="images/optlogo.png"></a>
+            </div>
+
+            <nav id="nav-wrap">
+
+                <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
+                <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+
+                <ul id="nav" class="nav">
+                    <li><a href="index.html#intro">Home</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#portfolio">Portfolio</a></li>
+                    <!--  <li><a href="#journal">Journal</a></li> -->
+                    <li><a href="index.html#about">About Us</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="career.html">Career</a></li>
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </div>
+
+</header> <!-- Header End -->
+
+<body>
+    <br />
+    <div class="container-fluid full">
+        <div class="fakeimg" style="height:450px;">
+            <div class="col-md-12">
+                <div class="col-md-2"></div>
+
+                <div class="col-md-8">
+                    <div class="post-heading">
+
+                    </div>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="col-md-2">
+            <ul class="s_icon">
+                <li><a class="w-inline-block social-share-btn fb"
+                        href="https://www.facebook.com/sharer/sharer.php?u=&t=" title="Share on Facebook"
+                        target="_blank"
+                        onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;">
+                        <i class=" fa fa-facebook"> &nbsp; </i></a></li>
+                <li><a class="w-inline-block social-share-btn tw" href="https://twitter.com/intent/tweet?"
+                        target="_blank" title="Tweet"
+                        onclick="window.open('https://twitter.com/intent/tweet?text=%20Check%20up%20this%20awesome%20content' + encodeURIComponent(document.title) + ':%20 ' + encodeURIComponent(document.URL)); return false;">
+                        <i class="fa fa-twitter">&nbsp; </i>
+                    </a></li>
+                <li><a class="w-inline-block social-share-btn gplus" href="https://plus.google.com/share?url="
+                        target="_blank" title="Share on Google+"
+                        onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;">
+                        <i class="fa fa-google-plus"> &nbsp; </i></a></li>
+                <li><a class="w-inline-block social-share-btn lnk"
+                        href="http://www.linkedin.com/shareArticle?mini=true&url=&title=&summary=&source="
+                        target="_blank" title="Share on LinkedIn"
+                        onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(document.URL) + '&title=' + encodeURIComponent(document.title)); return false;">
+                        <i class="fa fa-linkedin"></i></a></li>
+                <li><a class="w-inline-block social-share-btn pin" title="Pin it" target="_blank"
+                        href='https://www.pinterest.com/pin/create/button/?url=https://theoptimumlabs.com/android-app-and-alexa-skill-for-ces-2019.html&media=https://theoptimumlabs.com/images/blogs/CES2019service.png&description=Alexa Skill Android App for CES2019 | Optimum Technical Labs LLP'>
+                        <i class="fa fa-pinterest">&nbsp;</i>
+                    </a></li>
+                <li class="whatsapp"><a class="w-inline-block social-share-btn" href="whatsapp://send?text="
+                        target="_blank" title="Share On Whatsapp"
+                        onclick="window.open('whatsapp://send?text=%20Take%20a%20look%20at%20this%20awesome%20page%20-%20' + encodeURIComponent(document.URL)); return false;">
+                        <i class="fa fa-whatsapp">&nbsp;</i>
+                    </a></li>
+                <li><a class="w-inline-block social-share-btn" href="https://web.skype.com/share?url=" target="_blank"
+                        title="Share On Skype"
+                        onclick="window.open('https://web.skype.com/share?url=%20Take%20a%20look%20at%20this%20awesome%20page%20-%20' + encodeURIComponent(document.URL)); return false;">
+                        <i class="fa fa-skype">&nbsp;</i>
+                    </a></li>
+            </ul>
+        </div>
+        <div class="col-md-8" style="position:initial!important;">
+            <div class="card">
+                <h1>Android app and Alexa Skill for your exhibition in CES 2019
+                </h1>
+                <span class="post-meta">Published on Dec 18, 2018 | By: Snehil Chouhan</span>
+                <span class="article-category ">&nbsp;
+                    <i class="fa fa-tags"></i>
+                    <a class="article-category-link red">alexa skill</a>
+                    <a class="article-category-link red">android</a>
+                </span><br /><br /><br />
+                <p>Are you exhibting at <a href="https://www.ces.tech/" class="red" title="CES2019"
+                        target="_blank">CES2019</a>? And want better ways to display your products/services.
+                </p>
+                <p>How about an <a href="alexa-skill-development.html" title="Alexa Skills" class="red"
+                        target="_blank">Alexa Skills</a> which can answer questions about your products/service!</p>
+
+                <b>
+                    <font size="5">Sounds cool?</font>
+                </b></p>
+                <p> Or an <a href="android-app-development.html" title="Android app" class="red" target="_blank">Android
+                        app</a> for Android TV/Tablet/Phone which can show your products/service details with complete
+                    information and images</p>
+
+                <b>
+                    <font size="5">Let us help you with all the work load</font>
+                </b></p>
+                <p>We are here to help you creating app and skill. Its only approx 1 week remaining in CES 2019, we will
+                    make sure to develop and make ready app and skill for you. </p>
+                <p>Just <a href="index.html#contact" title="Contact us" class="red" target="_blank">Contact us</a> and
+                    we can quickly discuss details about your companies products/services. We have expertise in
+                    developing Mobile apps and Alexa Skills.</p>
+
+                <p>You can provide us all the content, And we can start right away with development of your app or alexa
+                    skill</p>
+                <p>Looking forward for your <a href="index.html#contact" class="red" title="email/skype message"
+                        target="_blank">email/skype message</a> and to develop great app/skill for your great exhibition
+                    at CES2019.</p>
+                <!-- Start comment -->
+                <div id="disqus_thread"></div>
+                <script>
+
+                    /**
+                    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+                    /*
+                    var disqus_config = function () {
+                    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                    };
+                    */
+                    (function () { // DON'T EDIT BELOW THIS LINE
+                        var d = document, s = d.createElement('script');
+                        s.src = 'https://https-theoptimumlabs-com.disqus.com/embed.js';
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments
+                        powered by Disqus.</a></noscript>
+                <!-- End comment -->
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+
+    <div class="col-md-12"><br /></div>
+    <div class="col-md-12"><br /></div>
+    <div class="col-md-12"><br /></div>
+    <div class="col-md-12"><br /></div>
+    <br /><br /><br /><br /><br /><br /><br />
+    <!-- footer
+   ================================================== -->
+    <section id="contact">
+
+        <div class="row section-head">
+            <div class="col full">
+                <h2>Contact Us</h2>
+                <p class="desc">Get in touch with us.</p>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col g-7">
+
+                <!-- form -->
+                <!-- <form name="contactForm" id="contactForm" method="post" action="">-->
+                <!--<form action="https://formspree.io/optimumwebdev1@gmail.com" method="POST"/>
+          <fieldset>
+
+                  <div>
+               <label for="contactName">Name <span class="required">*</span></label>
+         <input name="contactName" type="text" id="contactName" size="35"/>
+                  </div>
+
+                  <div>
+               <label for="contactEmail">Email <span class="required">*</span></label>
+               <input name="contactEmail" type="text" id="contactEmail" size="35"/>
+                  </div>
+
+                  <div>
+               <label for="contactSubject">Subject</label>
+               <input name="contactSubject" type="text" id="contactSubject" size="35"/>
+                  </div>
+
+                  <div>
+                     <label  for="contactMessage">Message <span class="required">*</span></label>
+                     <textarea name="contactMessage"  id="contactMessage" rows="15" cols="50" ></textarea>
+                  </div>
+
+                  <div>
+                     <button class="submit" id="submit">Submit</button>
+                     <span id="image-loader">
+                        <img src="images/loader.gif" alt="" />
+                     </span>
+                  </div>
+
+          </fieldset>
+        </form> <!-- Form End -->
+
+                <!-- contact-warning -->
+                <div id="message-warning"></div>
+                <!-- contact-success -->
+                <div id="message-success">
+                    <i class="icon-ok"></i>Your message was sent, thank you!<br />
+                </div>
+                <script type="text/javascript" src="https://form.jotform.me/jsform/90043428825456"></script>
+
+            </div>
+
+
+            <aside class="col g-5">
+
+                <h3>Contact Information</h3>
+
+                <p> </p>
+
+                <p>
+                    Optimum Technical Labs LLP<br />
+                    Office No. 202, Sch. No. 78 Part II, Near Vrindavan Restaurant <br />
+                    Vijay Nagar, Indore (M.P.)
+                </p>
+                <p>
+                    Email: swapnilchouhanabc@gmail.com , snehilchouhan@gmail.com <br />
+                <p>
+                    Mobile/Whatsapp: +91 9589861971 , +91 9685271934 <br />
+                    <br />
+                    Skype: swapnilchouhan , snehilchouhan <br />
+                <h3>For Fast Live Assistance, Please connect on Skype or Whatsapp above</h3> <br />
+
+
+
+                <!--    <h3>Template Info</h3>
+
+            <p>Kreative is a free website template by <a href="http://www.styleshout.com/">styleshout.com</a>. This work is
+          released and licensed under the <a href="http://creativecommons.org/licenses/by/3.0/" rel="license">
+          Creative Commons Attribution 3.0 License</a>, which means that you are free to
+          use and modify it for any personal or commercial purpose. All I ask is that you give me credit by including a credit link to
+          <a href="http://www.styleshout.com/">my website</a>.
+            </p>  -->
+
+            </aside>
+
+        </div>
+
+    </section> <!-- Contact Section End-->
+    <!-- footer
+   ================================================== -->
+    <footer><br />
+        <div class="row">
+            <div class="col g-12">
+                <ul class="social-links">
+                    <li><a href="https://www.facebook.com/OptimumTechnicalLabsLLP/" target="_blank"><i
+                                class="icon-facebook"></i></a></li>
+
+                    <li><a href="https://www.instagram.com/optimumtechlabs/" target="_blank"><i
+                                class="icon-instagram"></i></a></li>
+                    <li><a href="https://twitter.com/OptimumTechLabs" target="_blank"><i class="icon-twitter"></i></a>
+                    </li>
+                    <li><a href="https://plus.google.com/102854666634832073739" target="_blank"><i
+                                class="icon-google-plus-sign"></i></a></li>
+                    <li><a href="https://www.linkedin.com/company/the-optimum-technical-labs/" target="_blank"><i
+                                class="icon-linkedin"></i></a></li>
+                    <!--<li><a href="#"><i class="icon-skype"></i></a></li>
+               <li><a href="#"><i class="icon-rss-sign"></i></a></li>-->
+                </ul>
+            </div>
+        </div>
+        <br />
+        <div class="clear"></div>
+        <div class="row">
+
+            <div class="col g-12">
+                <ul class="copyright">
+                    <li>&copy; 2018 Optimum Technical Labs LLP</li>
+                    <li>&copy; 2014 Kreative</li>
+                    <li>Design by <a href="http://www.styleshout.com/" title="Styleshout"></a>Styleshout</li>
+                </ul>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- Footer End-->
+
+    <!-- Java Script
+   ================================================== -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
+    <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+
+    <script src="js/scrollspy.js"></script>
+    <script src="js/jquery.flexslider.js"></script>
+    <script src="js/jquery.reveal.js"></script>
+    <!-- <script src="http://maps.google.com/maps/api/js?sensor=true" type="text/javascript"></script>
+   <script src="js/gmaps.js"></script> -->
+    <script src="js/init.js"></script>
+    <script src="js/smoothscrolling.js"></script>
+
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/5a45f799d7591465c706710b/default';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+    <!--coment-->
+    <script id="dsq-count-scr" src="//https-theoptimumlabs-com.disqus.com/count.js" async></script>
+
+</body>
+
+</html>
