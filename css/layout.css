@@ -518,6 +518,7 @@ ul#nav li.active a { color: #fff !important; }
    display: flex;
    justify-content: center;
    align-items: center;
+   flex-wrap: wrap;
 }
 
 .subcription-form>input, .subcription-form>button{
