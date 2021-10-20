@@ -531,6 +531,9 @@ ul#nav li.active a { color: #fff !important; }
    display: flex;
    justify-content: center;
    align-items: center;
+   font-weight: 400;
+   background: red;
+   color: white;
 }
 
 #services a, #services a:visited  { color: #C4C4C4; }
