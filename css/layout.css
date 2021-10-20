@@ -2018,13 +2018,18 @@ footer .social-links li:first-child { margin-left: 0; }
     margin-top: 290px !important;
   }}
 /*Added by dk*/
-@media only screen and (max-width: 460px) {
+@media only screen and (max-width: 490px) {
    #intro {
    background-image: #590207 url(../images/intro-bg.jpg);
    overflow: hidden;
    background-size: contain;
    background-repeat: no-repeat;
    }
+
+   .subcription-form{
+      flex-direction: column;
+   }
+
 #portfolio .flex-direction-nav .flex-next {
     right: 0px;
     /*background: #2B0D05 url(../images/direction-nav-right.png) no-repeat 53% 50%;*/
