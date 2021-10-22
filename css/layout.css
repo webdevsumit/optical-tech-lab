@@ -38,7 +38,9 @@
 
 /* code for subscription form start */
 
-
+*{
+   scroll-behavior: smooth;
+}
   @font-face {
     font-display: block;
     font-family: Roboto;
@@ -500,6 +502,28 @@ ul#nav li.active a { color: #fff !important; }
    align-items: stretch;
    flex-wrap: wrap;
    background-color: #590207;
+}
+
+
+.show-media-btn{
+   width: 60px;
+   padding: 5px;
+   position: fixed;
+   bottom: 100px;
+   right: 22px;
+   border-radius: 50%;
+   overflow: hidden;
+   z-index: 100;
+   box-shadow: 1px 1px 4px 5px rgba(0, 0, 0, 0.13);
+}
+
+.foot-main-container{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+   background-color: #590207;
+   min-height: 400px;
 }
 
 .work-on-main-container{
@@ -1586,6 +1610,13 @@ footer .social-links li:first-child { margin-left: 0; }
 
 /* small screens
 --------------------------------------------------------------------- */
+@media only screen and (min-width: 780px) {
+   .show-media-btn{
+      display: none;
+   }
+}
+
+
 @media only screen and (max-width: 1000px) {
 
   #intro {
