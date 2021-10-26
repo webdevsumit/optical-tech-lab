@@ -202,6 +202,7 @@ ul#nav > li.active a {
     background: #F70D1A;
     color: #fff !important;
 }
+
 /* ================================================================== */
 
 /* b. Header Styles
@@ -560,6 +561,7 @@ ul#nav li.active a { color: #fff !important; }
    padding: 20px;
    border-radius: 10px;
    background-color: white;
+   min-height: 300px;
 }
 
 .tech-card{
@@ -1614,6 +1616,7 @@ footer .social-links li:first-child { margin-left: 0; }
    .show-media-btn{
       display: none;
    }
+   
 }
 
 
@@ -1624,6 +1627,11 @@ footer .social-links li:first-child { margin-left: 0; }
    overflow: hidden;
    background-size: contain;
    background-repeat: no-repeat;
+   }
+
+   #nav{
+      overflow-y: scroll;
+      max-height: 95vh;
    }
 
    .nav-list{
