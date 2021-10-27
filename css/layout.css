@@ -212,6 +212,7 @@ ul#nav > li.active a {
 header {
     height: 85px;
     width: 100%;
+    overflow-x: hidden;
     z-index: 99999;
     background: #fff;
     position: fixed;
@@ -557,11 +558,13 @@ ul#nav li.active a { color: #fff !important; }
    justify-content: center;
    align-items: center;
    flex-direction: column;
-   margin: 20px;
+   margin: 20px!important;
    padding: 20px;
    border-radius: 10px;
    background-color: white;
    min-height: 300px;
+   max-width: 90%!important;
+   flex-wrap: wrap;
 }
 
 .tech-card{
@@ -649,7 +652,7 @@ ul#nav li.active a { color: #fff !important; }
 
 .service-process{
    border:1px solid white!important;
-   margin: 10px;
+   margin: 10px!important;
    max-width: 300px;
    background-color: #f1fcfd;
    min-height: 400px;
@@ -894,6 +897,13 @@ ul#nav li.active a { color: #fff !important; }
    font: 15px/24px montserrat-bold, sans-serif;
    letter-spacing: 1px;
    text-transform: uppercase;
+}
+
+.process-wrap{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
 }
 
 /* Team Members */
@@ -1620,7 +1630,7 @@ footer .social-links li:first-child { margin-left: 0; }
 }
 
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1070px) {
 
   #intro {
    background-image: #590207 url(../images/intro-bg.jpg);
@@ -1740,7 +1750,7 @@ footer .social-links li:first-child { margin-left: 0; }
 /* mobile wide
 ---------------------------------------------------------------------- */
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1070px) {
 
    #intro {
    background-image: #590207 url(../images/intro-bg.jpg);
@@ -2092,7 +2102,7 @@ footer .social-links li:first-child { margin-left: 0; }
 /* mobile narrow
   -------------------------------------------------------------------------- */
 /*Added byy dk*/
-@media screen and (max-width: 680px) and (min-width: 420px) {
+@media screen and (max-width: 1070px) and (min-width: 420px) {
    #intro {
    background-image: #590207 url(../images/intro-bg.jpg);
    overflow: hidden;
