@@ -212,7 +212,7 @@ ul#nav > li.active a {
 header {
     height: 85px;
     width: 100%;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     z-index: 99999;
     background: #fff;
     position: fixed;
@@ -243,6 +243,11 @@ header .logo a {
     left: 12px;
     vertical-align: top;
     top: -55px;
+}
+
+body, header{
+   max-width: 100vw!important;
+   overflow-x: hidden!important;
 }
 
 .portfolio-item.web {
@@ -564,6 +569,7 @@ ul#nav li.active a { color: #fff !important; }
    background-color: white;
    min-height: 300px;
    max-width: 90%!important;
+   min-width: 240px;
    flex-wrap: wrap;
 }
 
@@ -901,7 +907,7 @@ ul#nav li.active a { color: #fff !important; }
 
 .process-wrap{
    display: flex;
-   flex-direction: column;
+   flex-wrap: wrap;
    justify-content: center;
    align-items: center;
 }
@@ -977,6 +983,10 @@ ul#nav li.active a { color: #fff !important; }
 }
 .testimonials .client-cite {
    font: 18px/36px opensans-light, sans-serif;
+}
+
+.testimolnial-review{
+   width: 100%;
 }
 
 /* ================================================================== */
